@@ -1,8 +1,14 @@
 package dmg;
 
+
 public class Vect2 implements Vector{
     private float x;
     private float y;
+
+    public Vect2(float x, float y){
+        this.x = x;
+        this.y = y;
+    }
 
     @Override
     public void setX(float x) {
@@ -25,7 +31,7 @@ public class Vect2 implements Vector{
     }
 
     @Override
-    public void transform(float f) {
+    public void scale(float f) {
         this.x = this.x * f;
         this.y = this.y * f;
     }
@@ -35,4 +41,10 @@ public class Vect2 implements Vector{
         this.x = f.getX() + this.x;
         this.y = f.getY() + this.y;
     }
+
+    public void linTransform(Matrix2x2 m){
+        this.x = (m.getVectorA().getX() * this.x) + (m.getVectorB().getX() * this.x);
+        this.y = (m.getVectorA().getY() * this.y) + (m.getVectorA().getY() * this.y);
+    }
+
 }
