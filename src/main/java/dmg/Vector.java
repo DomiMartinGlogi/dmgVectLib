@@ -5,6 +5,6 @@ public interface Vector {
     void setY(float y);
     float getX();
     float getY();
-    void transform(float f);
+    void scale(float f);
     void add(Vector f);
 }

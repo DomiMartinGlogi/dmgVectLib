@@ -4,6 +4,10 @@ public class Matrix2x2 implements Matrix{
     private Vect2 vectorA;
     private Vect2 vectorB;
 
+    public Matrix2x2(Vect2 a, Vect2 b){
+        this.vectorA = a;
+        this.vectorB = b;
+    }
     @Override
     public Vector getVectorA() {
         return vectorA;
@@ -16,9 +20,7 @@ public class Matrix2x2 implements Matrix{
 
     @Override
     public void setVectorA(float x, float y) {
-        Vect2 a = new Vect2();
-        a.setX(x);
-        a.setY(y);
+        Vect2 a = new Vect2(x, y);
         this.vectorA = a;
     }
 
@@ -27,9 +29,7 @@ public class Matrix2x2 implements Matrix{
     }
     @Override
     public void setVectorB(float x, float y) {
-        Vect2 a = new Vect2();
-        a.setX(x);
-        a.setY(y);
+        Vect2 a = new Vect2(x, y);
         this.vectorB = a;
     }
 
