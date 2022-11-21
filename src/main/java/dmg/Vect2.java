@@ -29,8 +29,7 @@ public class Vect2 implements Vector{
         return y;
     }
 
-    @Override
-    public void transform(float f) {
+    public void scale(float f) {
         this.x = this.x * f;
         this.y = this.y * f;
     }
