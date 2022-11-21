@@ -1,6 +1,5 @@
 package dmg;
 
-
 public class Vect2 implements Vector{
     private float x;
     private float y;
@@ -31,7 +30,7 @@ public class Vect2 implements Vector{
     }
 
     @Override
-    public void scale(float f) {
+    public void transform(float f) {
         this.x = this.x * f;
         this.y = this.y * f;
     }
